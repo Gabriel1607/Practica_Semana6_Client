@@ -67,6 +67,118 @@ public class MainActivity extends AppCompatActivity {
                    return true;
                 }
         );
+        downBtn.setOnTouchListener(
+                (view,event)->{
+                    Gson gson = new Gson();
+                    String key;
+                    Boolean isactive;
+                    Instruction obj;
+                    String json;
+                    switch(event.getAction()){
+                        case MotionEvent.ACTION_DOWN:
+                            gson = new Gson();
+                            key = "DOWN";
+                            isactive= true;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            gson = new Gson();
+                            key = "DOWN";
+                            isactive= false;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                    }
+                    return true;
+                }
+        );
+        leftBtn.setOnTouchListener(
+                (view,event)->{
+                    Gson gson = new Gson();
+                    String key;
+                    Boolean isactive;
+                    Instruction obj;
+                    String json;
+                    switch(event.getAction()){
+                        case MotionEvent.ACTION_DOWN:
+                            gson = new Gson();
+                            key = "LEFT";
+                            isactive= true;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            gson = new Gson();
+                            key = "LEFT";
+                            isactive= false;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                    }
+                    return true;
+                }
+        );
+        rightBtn.setOnTouchListener(
+                (view,event)->{
+                    Gson gson = new Gson();
+                    String key;
+                    Boolean isactive;
+                    Instruction obj;
+                    String json;
+                    switch(event.getAction()){
+                        case MotionEvent.ACTION_DOWN:
+                            gson = new Gson();
+                            key = "RIGHT";
+                            isactive= true;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            gson = new Gson();
+                            key = "RIGHT";
+                            isactive= false;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                    }
+                    return true;
+                }
+        );
+        colorBtn.setOnTouchListener(
+                (view,event)->{
+                    Gson gson = new Gson();
+                    String key;
+                    Boolean isactive;
+                    Instruction obj;
+                    String json;
+                    switch(event.getAction()){
+                        case MotionEvent.ACTION_DOWN:
+                            gson = new Gson();
+                            key = "COLOR";
+                            isactive= true;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                        case MotionEvent.ACTION_UP:
+                            gson = new Gson();
+                            key = "COLOR";
+                            isactive= false;
+                            obj = new Instruction(key,isactive);
+                            json = gson.toJson(obj);
+                            sendMessage(json);
+                            break;
+                    }
+                    return true;
+                }
+        );
     }
 
     public void initClient() {
